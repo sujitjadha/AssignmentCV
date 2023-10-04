@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CV</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body {
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            background: #ffff;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .container .left_side {
+            position: relative;
+            background: #003147;
+            padding: 40px;
+        }
+
+        .profiletext {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profiletext .imgbx {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profiletext .imgbx .imgbx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
+        }
+
+        .profiletext h2 {
+            color: #ffff;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+
+        .profiletext h2 span {
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        .contactinfo {
+            padding-top: 40px;
+        }
+
+        .title {
+            color: #ffff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .contactinfo ul {
+            position: relative;
+        }
+
+        .contactinfo ul li {
+            position: relative;
+            list-style: none;
+            margin: 10px 0;
+            cursor: pointer;
+
+
+        }
+
+        .contactinfo ul li .icon {
+            display: inline-block;
+            width: 30px;
+            font-size: 18px;
+            color: #03a9f4;
+        }
+
+        .contactinfo ul li span {
+            color: #ffff;
+            font-size: 300;
+        }
+
+        .contactinfo_education li {
+            margin-bottom: 15px;
+        }
+
+        .contactinfo_education h5 {
+            color: #03a9f4;
+            font-weight: 500;
+        }
+
+        .contactinfo_education h4 {
+            color: #ffff;
+            font-weight: 500;
+        }
+
+        .contactinfo_education h4:nth-child(2) {
+            color: #ffff;
+            font-weight: 500;
+        }
+
+        .contactinfo_language .percent {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: black;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .contactinfo_language .percent div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+
+        .container .right_side {
+            position: relative;
+            background: #ffff;
+            padding: 40px;
+        }
+
+        .about {
+            margin-bottom: 50px;
+
+        }
+
+        .about:last-child {
+            margin-bottom: 0;
+        }
+
+        .title2 {
+
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+        }
+        .about .box
+        {
+display: flex;
+flex-direction: row;
+margin: 20px 0;
+
+        }
+        .about .box .year_company
+        {
+            min-width: 150px;
+
+        }
+        .about .box .year_company h5{
+            text-transform: uppercase;
+            color: #848c90;
+            font-weight: 600;
+
+        }
+        .about .box .text h4{
+            text-transform: uppercase;
+            color: #2a7da2;
+            font-size: 16px;
+
+        }
+        .about_skills .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .about_skills .box h4{
+            text-transform: uppercase;
+            color: #848c99;
+            font-weight: 500;
+
+        }
+        .about_skills .box h4 .percent
+        {
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #f0f0f0;
+        }
+        .about_skills .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+        .intrest ul{
+            display: grid;
+
+        }
+        .intrest ul li{
+            list-style-type: none;
+            color: #848c90;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="profiletext">
+                <div class="imgbx">
+                    <img src="../media/sujit.jpg.jpg" >
+                </div>
+                <h2>Sujit Jadhav<span><br>Frontend Developer</span></h2>
+            </div>
+            <div class="contactinfo">
+                <h3 class="title">Contact info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <span class="text">9822398966</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-g"></i></span>
+                        <span class="text">jadhavsujit954@gmai.com</span>
+                    </li>
+
+                    <li>
+                        <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="text">www.linkdin.com </span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-location-pin"></i></span>
+                        <span class="text">41 kasba peth pune</span>
+                    </li>
+                </ul>
+                <div class="contactinfo_education">
+                    <h3 class="title">Education</h3>
+                    <ul>
+                        <li>
+                            <h5>2019-2022</h5>
+                            <h4> Bachlore of Engineering</h4>
+                            <h4>University Name</h4>
+                        </li>
+                        <li>
+                            <h5>2013-2018</h5>
+                            <h4> Diploma </h4>
+                            <h4>University Name</h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contactinfo_language">
+                    <h3 class="title">Language</h3>
+                    <ul>
+                        <li>
+                            <span class="text">English</span>
+                            <span class="percent">
+                                <div style="width: 90%;"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">Hindi</span>
+                            <span class="percent">
+                                <div style="width: 95%;"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">Marathi</span>
+                            <span class="percent">
+                                <div style="width: 100%;"></div>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="right_side">
+            <div class="about">
+                <h2 class="title2">profile</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione in praesentium libero ab! Obcaecati
+                    libero sed adipisci nostrum eius repellat voluptatem saepe odio excepturi cupiditate assumenda
+                    ducimus voluptatibus iure modi, quae sunt nobis voluptate repudiandae ut temporibus. Quia, eum
+                    perferendis in alias ratione nulla blanditiis. Voluptates voluptatum nesciunt quisquam expedita
+                    temporibus minima at vel, provident, amet itaque aspernatur dolores eum incidunt dolorum earum dolor
+                    id! Nihil reprehenderit neque et vitae debitis, doloremque eveniet dolorem laborum odio repudiandae
+                    corrupti harum sint fuga temporibus, ut architecto praesentium voluptates! Excepturi id voluptatum
+                    exercitationem iure ipsa, ab nulla nemo vero assumenda reiciendis placeat esse?</p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2022-2023</h5>
+                        <h5>SPeedUp</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Frontend Developer</h4>
+                        <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio vero deserunt tenetur maiores,
+                            quam quasi vel excepturi adipisci ipsam, quod amet, dolore iure delectus sequi provident!
+                            Sit animi quidem fugit?</P>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2023-present</h5>
+                        <h5>SpeedUp</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Frontend Developer</h4>
+                        <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio vero deserunt tenetur maiores,
+                            quam quasi vel excepturi adipisci ipsam, quod amet, dolore iure delectus sequi provident!
+                            Sit animi quidem fugit?</P>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="about_skills">
+                <h2 class="title2">professional skills</h2>
+                <div class="box">
+                    <h4>HTML</h4><br>
+                    <div class="percent">
+                        <!-- <div style="width: 95%;"></div> -->
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                       
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>JavaScript</h4>
+                    <div class="percent"></div>
+                </div>
+                <div class="box">
+                    <h4>React</h4>
+                    <div class="percent"></div>
+                </div>
+            </div>
+
+            <div class="intrest">
+                <h2 class="title2">Intrest</h2>
+                <ul>
+                    <li><i class="fa-solid fa-gamepad"></i>Gaming</li><br><br>
+                    <li><i class="fa-solid fa-person-hiking"></i>Treking</li><br><br>
+                    <li><i class="fa-solid fa-motorcycle"></i>Riding</li><br><br>
+                    
+                    <li><i class="fa-solid fa-compass-drafting"></i>Drawing</li><br><br>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
